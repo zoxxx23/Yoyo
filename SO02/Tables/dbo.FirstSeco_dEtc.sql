@@ -5,7 +5,7 @@ GO
 CREATE TABLE [dbo].[FirstSecondEtc] (
 		[FIRST]      [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 		[SECOND]     [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-		[THIRD]      [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[THIRD]      [nvarchar](50) COLLATE SQL_Latin1_General_CP1251_CI_AS NULL,
 		[FOURTH]     [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[FIFTH]      [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_FirstSecondEtc]

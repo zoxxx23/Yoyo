@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[T2x] (
 ) ON [PRIMARY]
 GO
 CREATE NONCLUSTERED INDEX [eee]
-	ON [dbo].[T2x] ([Age])
+	ON [dbo].[T2x] ([Age] DESC)
 	WITH ( PAD_INDEX = ON)
 	ON [PRIMARY]
 GO

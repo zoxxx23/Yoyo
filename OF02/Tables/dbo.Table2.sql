@@ -1,0 +1,28 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+SET ANSI_PADDING OFF
+GO
+CREATE TABLE [dbo].[Table2] (
+		[Column1]     [int] NULL,
+		[Column2]     [int] NOT NULL,
+		CONSTRAINT [UQ__Table2__529C02D5E5149F03]
+		UNIQUE
+		NONCLUSTERED
+		([Column1])
+		ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Table2]
+	ADD
+	CONSTRAINT [CK__Table2__Column1__2DE6D218]
+	CHECK
+	([Column1]>=(1) AND [Column1]<=(999))
+GO
+ALTER TABLE [dbo].[Table2]
+CHECK CONSTRAINT [CK__Table2__Column1__2DE6D218]
+GO
+CREATE STATISTICS [Stat1]
+	ON [dbo].[Table2] ([Column1])
+GO
+ALTER TABLE [dbo].[Table2] SET (LOCK_ESCALATION = TABLE)
+GO

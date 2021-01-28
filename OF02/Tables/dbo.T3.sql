@@ -1,0 +1,27 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[T3] (
+		[PersonId]      [int] NOT NULL,
+		[LastName]      [varchar](255) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+		[FirstName]     [varchar](255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[Age]           [int] NOT NULL,
+		CONSTRAINT [PK__T3__AA2FFBE5F9D581F8]
+		PRIMARY KEY
+		CLUSTERED
+		([PersonId])
+	ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[T3]
+	ADD
+	CONSTRAINT [C_Age]
+	CHECK
+	([Age]>=(18))
+GO
+ALTER TABLE [dbo].[T3]
+CHECK CONSTRAINT [C_Age]
+GO
+ALTER TABLE [dbo].[T3] SET (LOCK_ESCALATION = TABLE)
+GO

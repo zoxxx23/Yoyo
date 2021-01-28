@@ -4,6 +4,7 @@ GO
 
 create TRIGGER [alo]
 ON [dbo].[EnableDisableTrigger]
+-- Lol comment
 AFTER UPDATE   
 AS RAISERROR ('Notify Customer Relations', 16, 10);
 GO

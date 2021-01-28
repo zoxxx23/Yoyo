@@ -6,5 +6,5 @@ CREATE PROCEDURE SortByBRAND
 AS
 SELECT * FROM Motorcycles
 ORDER BY Brand
-COLLATE Latin1_General_CI_AS_KS_WS ASC;
+COLLATE Cyrillic_General_CI_AS ASC;
 GO

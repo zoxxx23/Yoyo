@@ -16,3 +16,9 @@ CREATE TABLE [dbo].[Motorcycles] (
 GO
 ALTER TABLE [dbo].[Motorcycles] SET (LOCK_ESCALATION = TABLE)
 GO
+
+GRANT SELECT, INSERT, UPDATE
+  ON [dbo].[Motorcycles]
+  TO [guest]
+GO
+

@@ -1,8 +1,5 @@
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
-
-CREATE PROCEDURE SelectAllMotocross
-AS
-SELECT * FROM Motorcycles WHERE Type = 'Motocross'
+--Procedure [dbo].[SelectAllMotocross] is encrypted. It could not be scripted
 GO

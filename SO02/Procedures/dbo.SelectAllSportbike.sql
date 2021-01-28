@@ -4,5 +4,5 @@ GO
 
 CREATE PROCEDURE SelectAllSportbike
 AS
-SELECT * FROM Motorcycles WHERE Type = 'Sportbike'
+SELECT * FROM Motorcycles WHERE Type='Sportbike'
 GO

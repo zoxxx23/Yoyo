@@ -11,6 +11,7 @@ CREATE TABLE [Purchasing].[Vendor] (
 		[ActiveFlag]                  [dbo].[Flag] NOT NULL,
 		[PurchasingWebServiceURL]     [nvarchar](1024) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[ModifiedDate]                [datetime] NOT NULL,
+		[NewColumnUser1]              [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_Vendor_BusinessEntityID]
 		PRIMARY KEY
 		CLUSTERED

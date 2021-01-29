@@ -12,6 +12,8 @@ CREATE TABLE [Sales].[Customer] (
 		[ModifiedDate]      [datetime] NOT NULL,
 		[bre]               [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[eee]               [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[bbb]               [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[ccc]               [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_Customer_CustomerID]
 		PRIMARY KEY
 		CLUSTERED

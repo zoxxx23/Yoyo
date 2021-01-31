@@ -6,11 +6,6 @@ CREATE TABLE [Production].[Culture] (
 		[CultureID]        [nchar](6) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 		[Name]             [dbo].[Name] NOT NULL,
 		[ModifiedDate]     [datetime] NOT NULL,
-		[Novo1]            [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-		[e]                [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-		[ee]               [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-		[eee]              [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-		[r]                [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[t]                [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_Culture_CultureID]
 		PRIMARY KEY

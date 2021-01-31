@@ -1,6 +1,6 @@
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
-SET ANSI_PADDING ON
+SET ANSI_PADDING Off
 GO
 CREATE TABLE [Person].[Password] (
 		[BusinessEntityID]     [int] NOT NULL,
@@ -10,6 +10,7 @@ CREATE TABLE [Person].[Password] (
 		[ModifiedDate]         [datetime] NOT NULL,
 		[NewColUser1]          [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[NewColUser2]          [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[ttt]          [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_Password_BusinessEntityID]
 		PRIMARY KEY
 		CLUSTERED

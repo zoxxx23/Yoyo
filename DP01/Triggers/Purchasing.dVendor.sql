@@ -2,7 +2,7 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TRIGGER [Purchasing].[dVendor] ON [Purchasing].[Vendor] 
+CREATE TRIGGER [Purchasing].[dVendor2] ON [Purchasing].[Vendor] 
 INSTEAD OF DELETE NOT FOR REPLICATION AS 
 BEGIN
     DECLARE @Count int;

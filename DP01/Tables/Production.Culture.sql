@@ -11,6 +11,7 @@ CREATE TABLE [Production].[Culture] (
 		[ee]               [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[eee]              [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[r]                [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[t]                [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_Culture_CultureID]
 		PRIMARY KEY
 		CLUSTERED

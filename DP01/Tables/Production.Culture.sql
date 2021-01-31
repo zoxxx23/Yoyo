@@ -7,8 +7,10 @@ CREATE TABLE [Production].[Culture] (
 		[Name]             [dbo].[Name] NOT NULL,
 		[ModifiedDate]     [datetime] NOT NULL,
 		[Novo1]            [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-		[error]            [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[e]                [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[ee]               [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[eee]              [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[r]                [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_Culture_CultureID]
 		PRIMARY KEY
 		CLUSTERED

@@ -1,5 +1,5 @@
 SET ANSI_NULLS ON
-SET QUOTED_IDENTIFIER ON
+SET QUOTED_IDENTIFIER Off
 GO
 
 CREATE PROCEDURE [dbo].[uspGetBillOfMaterials]
@@ -20,7 +20,6 @@ BEGIN
             ON b.[ComponentID] = p.[ProductID] 
         WHERE b.[ProductAssemblyID] = @StartProductID 
             AND @CheckDate >= b.[StartDate] 
-            AND @CheckDate <= ISNULL(b.[EndDate], @CheckDate)
         UNION ALL
         SELECT b.[ProductAssemblyID], b.[ComponentID], p.[Name], b.[PerAssemblyQty], p.[StandardCost], p.[ListPrice], b.[BOMLevel], [RecursionLevel] + 1 -- Join recursive member to anchor
         FROM [BOM_cte] cte

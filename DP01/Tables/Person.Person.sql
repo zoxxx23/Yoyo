@@ -16,6 +16,7 @@ CREATE TABLE [Person].[Person] (
 		[Demographics]              [xml](CONTENT [Person].[IndividualSurveySchemaCollection]) NULL,
 		[rowguid]                   [uniqueidentifier] NOT NULL ROWGUIDCOL,
 		[ModifiedDate]              [datetime] NOT NULL,
+		[rr]                        [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_Person_BusinessEntityID]
 		PRIMARY KEY
 		CLUSTERED
@@ -76,16 +77,6 @@ ALTER TABLE [Person].[Person]
 	DEFAULT (getdate()) FOR [ModifiedDate]
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Default constraint value of GETDATE()', 'SCHEMA', N'Person', 'TABLE', N'Person', 'CONSTRAINT', N'DF_Person_ModifiedDate'
-GO
-ALTER TABLE [Person].[Person]
-	WITH CHECK
-	ADD CONSTRAINT [FK_Person_BusinessEntity_BusinessEntityID]
-	FOREIGN KEY ([BusinessEntityID]) REFERENCES [Person].[BusinessEntity] ([BusinessEntityID])
-ALTER TABLE [Person].[Person]
-	CHECK CONSTRAINT [FK_Person_BusinessEntity_BusinessEntityID]
-
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Foreign key constraint referencing BusinessEntity.BusinessEntityID.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'CONSTRAINT', N'FK_Person_BusinessEntity_BusinessEntityID'
 GO
 CREATE NONCLUSTERED INDEX [IX_Person_LastName_FirstName_MiddleName]
 	ON [Person].[Person] ([LastName], [FirstName], [MiddleName])

@@ -9,14 +9,13 @@ CREATE TABLE [Person].[Password] (
 		[rowguid]              [uniqueidentifier] NOT NULL ROWGUIDCOL,
 		[ModifiedDate]         [datetime] NOT NULL,
 		[NewColUser1]          [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[ccc]                  [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_Password_BusinessEntityID]
 		PRIMARY KEY
 		CLUSTERED
 		([BusinessEntityID])
 	ON [PRIMARY]
 ) ON [PRIMARY]
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Clustered index created by a primary key constraint.', 'SCHEMA', N'Person', 'TABLE', N'Password', 'INDEX', N'PK_Password_BusinessEntityID'
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Primary key (clustered) constraint', 'SCHEMA', N'Person', 'TABLE', N'Password', 'CONSTRAINT', N'PK_Password_BusinessEntityID'
 GO
@@ -25,14 +24,10 @@ ALTER TABLE [Person].[Password]
 	CONSTRAINT [DF_Password_rowguid]
 	DEFAULT (newid()) FOR [rowguid]
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Default constraint value of NEWID()', 'SCHEMA', N'Person', 'TABLE', N'Password', 'CONSTRAINT', N'DF_Password_rowguid'
-GO
 ALTER TABLE [Person].[Password]
 	ADD
 	CONSTRAINT [DF_Password_ModifiedDate]
 	DEFAULT (getdate()) FOR [ModifiedDate]
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Default constraint value of GETDATE()', 'SCHEMA', N'Person', 'TABLE', N'Password', 'CONSTRAINT', N'DF_Password_ModifiedDate'
 GO
 ALTER TABLE [Person].[Password]
 	WITH CHECK

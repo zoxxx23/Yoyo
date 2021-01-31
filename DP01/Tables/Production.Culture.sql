@@ -7,6 +7,8 @@ CREATE TABLE [Production].[Culture] (
 		[Name]             [dbo].[Name] NOT NULL,
 		[ModifiedDate]     [datetime] NOT NULL,
 		[Novo1]            [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[error]            [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[e]                [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_Culture_CultureID]
 		PRIMARY KEY
 		CLUSTERED
@@ -14,16 +16,12 @@ CREATE TABLE [Production].[Culture] (
 	ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Clustered index created by a primary key constraint.', 'SCHEMA', N'Production', 'TABLE', N'Culture', 'INDEX', N'PK_Culture_CultureID'
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Primary key (clustered) constraint', 'SCHEMA', N'Production', 'TABLE', N'Culture', 'CONSTRAINT', N'PK_Culture_CultureID'
+EXEC sp_addextendedproperty N'MS_Description', N'Clustered index created by a primary key constraint.', 'SCHEMA', N'Production', 'TABLE', N'Culture', 'CONSTRAINT', N'PK_Culture_CultureID'
 GO
 ALTER TABLE [Production].[Culture]
 	ADD
 	CONSTRAINT [DF_Culture_ModifiedDate]
 	DEFAULT (getdate()) FOR [ModifiedDate]
-GO
-EXEC sp_addextendedproperty N'MS_Description', N'Default constraint value of GETDATE()', 'SCHEMA', N'Production', 'TABLE', N'Culture', 'CONSTRAINT', N'DF_Culture_ModifiedDate'
 GO
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Culture_Name]
 	ON [Production].[Culture] ([Name])

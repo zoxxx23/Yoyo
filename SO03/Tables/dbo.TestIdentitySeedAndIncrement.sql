@@ -3,7 +3,7 @@ SET QUOTED_IDENTIFIER ON
 SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[TestIdentitySeedAndIncrement] (
-		[PersonId]      [int] IDENTITY(1, 2) NOT NULL,
+		[PersonId]      [int] IDENTITY(0, 10) NOT NULL,
 		[LastName]      [varchar](255) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 		[FirstName]     [varchar](255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[Age]           [int] NULL,

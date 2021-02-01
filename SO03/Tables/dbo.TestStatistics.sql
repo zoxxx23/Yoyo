@@ -21,8 +21,5 @@ GO
 ALTER TABLE [dbo].[TestStatistics]
 CHECK CONSTRAINT [CK__TestStati__Colum__3C69FB99]
 GO
-CREATE STATISTICS [Stat1]
-	ON [dbo].[TestStatistics] ([Column1])
-GO
 ALTER TABLE [dbo].[TestStatistics] SET (LOCK_ESCALATION = TABLE)
 GO

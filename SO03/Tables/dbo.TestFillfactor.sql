@@ -16,7 +16,6 @@ CREATE TABLE [dbo].[TestFillfactor] (
 GO
 CREATE NONCLUSTERED INDEX [IndexBRE]
 	ON [dbo].[TestFillfactor] ([PersonId])
-	WITH ( FILLFACTOR = 5)
 	ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[TestFillfactor] SET (LOCK_ESCALATION = TABLE)

@@ -16,3 +16,8 @@ CREATE TABLE [dbo].[TestGrant] (
 GO
 ALTER TABLE [dbo].[TestGrant] SET (LOCK_ESCALATION = TABLE)
 GO
+
+GRANT SELECT, INSERT, UPDATE 
+  ON [dbo].[TestGrant] 
+  TO [guest] 
+GO 

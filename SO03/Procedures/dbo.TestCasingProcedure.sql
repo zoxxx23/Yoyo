@@ -8,5 +8,5 @@ GO
 -- =============================================
 CREATE PROCEDURE [dbo].[TestCasingProcedure]
 AS
-SELECT * FROM TestCasing
+select * from TestCasing
 GO

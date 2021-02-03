@@ -16,7 +16,7 @@ CREATE TABLE [dbo].[TestPageRowLock] (
 GO
 CREATE NONCLUSTERED INDEX [eee]
 	ON [dbo].[TestPageRowLock] ([Age])
-	WITH (ALLOW_ROW_LOCKS = OFF)
+	WITH (ALLOW_ROW_LOCKS = ON)
 	ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[TestPageRowLock] SET (LOCK_ESCALATION = TABLE)

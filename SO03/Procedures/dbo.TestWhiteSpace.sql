@@ -4,5 +4,5 @@ GO
 
 CREATE PROCEDURE TestWhiteSpace
 AS
-SELECT * FROM TestCasing WHERE [2col] = 'bre'
+SELECT * FROM TestCasing WHERE [2col]='bre'
 GO

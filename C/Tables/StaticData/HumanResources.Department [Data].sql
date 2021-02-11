@@ -1,6 +1,6 @@
 SET IDENTITY_INSERT [HumanResources].[Department] ON
-INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [NEW]) VALUES (1, N'Engineering', N'Research and Development', '20080430 00:00:00.000', NULL)
-INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [NEW]) VALUES (2, N'Tool Design', N'Research and Development', '20080430 00:00:00.000', NULL)
+INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [NEW]) VALUES (1, N'Engineering', N'Research and Development', '20080430 00:00:00.000', 'a')
+INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [NEW]) VALUES (2, N'Tool Design', N'Research and Development', '20080430 00:00:00.000', 'b')
 INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [NEW]) VALUES (3, N'Sales', N'Sales and Marketing', '20080430 00:00:00.000', NULL)
 INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [NEW]) VALUES (4, N'Marketing', N'Sales and Marketing', '20080430 00:00:00.000', NULL)
 INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [NEW]) VALUES (5, N'Purchasing', N'Inventory Management', '20080430 00:00:00.000', NULL)

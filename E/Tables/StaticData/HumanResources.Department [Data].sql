@@ -1,8 +1,8 @@
 SET IDENTITY_INSERT [HumanResources].[Department] ON
 INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [OBoze]) VALUES (1, N'Engineering', N'Research and Development', '20080430 00:00:00.000', NULL)
 INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [OBoze]) VALUES (2, N'Tool Design', N'Research and Development', '20080430 00:00:00.000', NULL)
-INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [OBoze]) VALUES (3, N'Sales', N'Sales and Marketing', '20080430 00:00:00.000', NULL)
-INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [OBoze]) VALUES (4, N'Marketing', N'Sales and Marketing', '20080430 00:00:00.000', NULL)
+INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [OBoze]) VALUES (3, N'Sales', N'Sales and Marketing', '20080430 00:00:00.000', N'Lol       ')
+INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [OBoze]) VALUES (4, N'Marketing', N'Sales and Marketing', '20080430 00:00:00.000', N'Troll     ')
 INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [OBoze]) VALUES (5, N'Purchasing', N'Inventory Management', '20080430 00:00:00.000', NULL)
 INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [OBoze]) VALUES (6, N'Research and Development', N'Research and Development', '20080430 00:00:00.000', NULL)
 INSERT INTO [HumanResources].[Department] ([DepartmentID], [Name], [GroupName], [ModifiedDate], [OBoze]) VALUES (7, N'Production', N'Manufacturing', '20080430 00:00:00.000', NULL)

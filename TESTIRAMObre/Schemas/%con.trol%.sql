@@ -1,3 +1,3 @@
 CREATE SCHEMA [con.trol]
-	AUTHORIZATION [dbo]
+	AUTHORIZATION [Rekoste da ne moze, aaaa?]
 GO

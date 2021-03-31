@@ -8,6 +8,8 @@ CREATE TABLE [HumanResources].[EmployeePayHistory] (
 		[Rate]                 [money] NOT NULL,
 		[PayFrequency]         [tinyint] NOT NULL,
 		[ModifiedDate]         [datetime] NOT NULL,
+		[ne]                   [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[HEHE]                 [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_EmployeePayHistory_BusinessEntityID_RateChangeDate]
 		PRIMARY KEY
 		CLUSTERED
@@ -72,3 +74,4 @@ EXEC sp_addextendedproperty N'MS_Description', N'Date and time the record was la
 GO
 ALTER TABLE [HumanResources].[EmployeePayHistory] SET (LOCK_ESCALATION = TABLE)
 GO
+

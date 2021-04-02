@@ -34,7 +34,7 @@ CREATE UNIQUE NONCLUSTERED INDEX [AK_Department_Name]
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Unique nonclustered index.', 'SCHEMA', N'HumanResources', 'TABLE', N'Department', 'INDEX', N'AK_Department_Name'
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Lookup table containing the departments within the Adventure Works Cycles company.', 'SCHEMA', N'HumanResources', 'TABLE', N'Department', NULL, NULL
+EXEC sp_addextendedproperty N'MS_Description', N'hihihi', 'SCHEMA', N'HumanResources', 'TABLE', N'Department', NULL, NULL
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Primary key for Department records.', 'SCHEMA', N'HumanResources', 'TABLE', N'Department', 'COLUMN', N'DepartmentID'
 GO

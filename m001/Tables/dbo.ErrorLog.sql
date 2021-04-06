@@ -12,6 +12,7 @@ CREATE TABLE [dbo].[ErrorLog] (
 		[ErrorProcedure]     [nvarchar](126) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[ErrorLine]          [int] NULL,
 		[ErrorMessage]       [nvarchar](4000) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+		[ee]                 [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_ErrorLog_ErrorLogID]
 		PRIMARY KEY
 		CLUSTERED
@@ -30,7 +31,7 @@ ALTER TABLE [dbo].[ErrorLog]
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Default constraint value of GETDATE()', 'SCHEMA', N'dbo', 'TABLE', N'ErrorLog', 'CONSTRAINT', N'DF_ErrorLog_ErrorTime'
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Audit table tracking errors in the the AdventureWorks database that are caught by the CATCH block of a TRY...CATCH construct. Data is inserted by stored procedure dbo.uspLogError when it is executed from inside the CATCH block of a TRY...CATCH construct.', 'SCHEMA', N'dbo', 'TABLE', N'ErrorLog', NULL, NULL
+EXEC sp_addextendedproperty N'MS_Description', N'ehhehe', 'SCHEMA', N'dbo', 'TABLE', N'ErrorLog', NULL, NULL
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Primary key for ErrorLog records.', 'SCHEMA', N'dbo', 'TABLE', N'ErrorLog', 'COLUMN', N'ErrorLogID'
 GO
@@ -50,5 +51,7 @@ EXEC sp_addextendedproperty N'MS_Description', N'The line number at which the er
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'The message text of the error that occurred.', 'SCHEMA', N'dbo', 'TABLE', N'ErrorLog', 'COLUMN', N'ErrorMessage'
 GO
-ALTER TABLE [dbo].[ErrorLog] SET (LOCK_ESCALATION = TABLE)
+EXEC sp_addextendedproperty N'MS_Description', N'rrrr', 'SCHEMA', N'dbo', 'TABLE', N'ErrorLog', 'COLUMN', N'ee'
+GO
+ALTER TABLE [dbo].[ErrorLog] SET (LOCK_ESCALATION = AUTO)
 GO

@@ -19,7 +19,7 @@ CREATE TABLE [Production].[Product] (
 		[Weight]                    [decimal](8, 2) NULL,
 		[DaysToManufacture]         [int] NOT NULL,
 		[ProductLine]               [nchar](2) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-		[Class]                     [nchar](2) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[Clazz]                     [nchar](2) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[Style]                     [nchar](2) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[ProductSubcategoryID]      [int] NULL,
 		[ProductModelID]            [int] NULL,

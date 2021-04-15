@@ -54,9 +54,9 @@ ALTER TABLE [Production].[Product]
 	ADD
 	CONSTRAINT [CK_Product_Class]
 	CHECK
-	(upper([Class])='H' OR upper([Class])='M' OR upper([Class])='L' OR [Class] IS NULL)
+	(upper([Clazz])='H' OR upper([Clazz])='M' OR upper([Clazz])='L' OR [Clazz] IS NULL)
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Check constraint [Class]=''h'' OR [Class]=''m'' OR [Class]=''l'' OR [Class]=''H'' OR [Class]=''M'' OR [Class]=''L'' OR [Class] IS NULL', 'SCHEMA', N'Production', 'TABLE', N'Product', 'CONSTRAINT', N'CK_Product_Class'
+EXEC sp_addextendedproperty N'MS_Description', N'Check constraint [Clazz]=''h'' OR [Clazz]=''m'' OR [Clazz]=''l'' OR [Clazz]=''H'' OR [Clazz]=''M'' OR [Clazz]=''L'' OR [Clazz] IS NULL', 'SCHEMA', N'Production', 'TABLE', N'Product', 'CONSTRAINT', N'CK_Product_Class'
 GO
 ALTER TABLE [Production].[Product]
 CHECK CONSTRAINT [CK_Product_Class]
@@ -269,7 +269,7 @@ EXEC sp_addextendedproperty N'MS_Description', N'Number of days required to manu
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'R = Road, M = Mountain, T = Touring, S = Standard', 'SCHEMA', N'Production', 'TABLE', N'Product', 'COLUMN', N'ProductLine'
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'H = High, M = Medium, L = Low', 'SCHEMA', N'Production', 'TABLE', N'Product', 'COLUMN', N'Class'
+EXEC sp_addextendedproperty N'MS_Description', N'H = High, M = Medium, L = Low', 'SCHEMA', N'Production', 'TABLE', N'Product', 'COLUMN', N'Clazz'
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'W = Womens, M = Mens, U = Universal', 'SCHEMA', N'Production', 'TABLE', N'Product', 'COLUMN', N'Style'
 GO

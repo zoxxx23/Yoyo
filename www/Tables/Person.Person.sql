@@ -8,7 +8,7 @@ CREATE TABLE [Person].[Person] (
 		[NameStyle]                 [dbo].[NameStyle] NOT NULL,
 		[Title]                     [nvarchar](8) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[FirstName]                 [dbo].[Name] NOT NULL,
-		[MiddleName]                [dbo].[Name] NULL,
+		[MiddleNameZ]                [dbo].[Name] NULL,
 		[LastName]                  [dbo].[Name] NOT NULL,
 		[Suffix]                    [nvarchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[EmailPromotion]            [int] NOT NULL,
@@ -87,8 +87,8 @@ ALTER TABLE [Person].[Person]
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Foreign key constraint referencing BusinessEntity.BusinessEntityID.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'CONSTRAINT', N'FK_Person_BusinessEntity_BusinessEntityID'
 GO
-CREATE NONCLUSTERED INDEX [IX_Person_LastName_FirstName_MiddleName]
-	ON [Person].[Person] ([LastName], [FirstName], [MiddleName])
+CREATE NONCLUSTERED INDEX [IX_Person_LastName_FirstName_MiddleNameZ]
+	ON [Person].[Person] ([LastName], [FirstName], [MiddleNameZ])
 	ON [PRIMARY]
 GO
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Person_rowguid]
@@ -109,7 +109,7 @@ EXEC sp_addextendedproperty N'MS_Description', N'A courtesy title. For example, 
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'First name of the person.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'FirstName'
 GO
-EXEC sp_addextendedproperty N'MS_Description', N'Middle name or middle initial of the person.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'MiddleName'
+EXEC sp_addextendedproperty N'MS_Description', N'Middle name or middle initial of the person.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'MiddleNameZ'
 GO
 EXEC sp_addextendedproperty N'MS_Description', N'Last name of the person.', 'SCHEMA', N'Person', 'TABLE', N'Person', 'COLUMN', N'LastName'
 GO
